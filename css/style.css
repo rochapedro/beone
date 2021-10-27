@@ -163,7 +163,7 @@ body {
     "chat post follow-user"
     "... post ..."
     "footer footer footer";
-  grid-template-columns: 27.5% 45% 27.5%;
+  grid-template-columns: calc(27.5% - 0.5rem) calc(45% - 1rem) calc(27.5% - 0.5rem);
   grid-template-rows: auto auto auto auto auto;
 }
 

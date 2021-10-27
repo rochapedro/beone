@@ -48,6 +48,42 @@ textarea::placeholder, input::placeholder, select::placeholder {
   color: var(--AnsiBrightWhite);
 }
 
+#scrollNav {
+  display: inline-block;
+  background-color: var(--Selection);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  margin-bottom: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: var(--AnsiBrightWhite);
+  text-decoration: none;
+}
+
+#scrollNav:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#scrollNav:active {
+  background-color: #555;
+}
+#scrollNav.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 .aside {
   height: 70px;
   width: 70px;
@@ -73,7 +109,7 @@ textarea::placeholder, input::placeholder, select::placeholder {
 }
 
 .btn-primary {
-  background: #27aae1;
+  background: linear-gradient(to bottom, rgba(39,170,225,.8), rgba(28,117,188,.8));
   padding: 7px 25px;
   border: none;
   font-size: 14px;
@@ -82,6 +118,21 @@ textarea::placeholder, input::placeholder, select::placeholder {
   font-weight: 600;
   outline: none;
   border-radius: 30px;
+}
+
+.btn-primary-circle {
+  background: linear-gradient(to bottom, rgba(39,170,225,.8), rgba(28,117,188,.8));
+  padding: 7px 25px;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  font-weight: 600;
+  outline: none;
+  display:block;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
 }
 
 .btn-success {
@@ -400,6 +451,10 @@ hr {
   cursor: pointer;
 }
 
+.info-language {
+  margin: 5px 0px 5px 0px;
+}
+
 .info-pub {
   margin: 2px 0px 2px 0px;
 }
@@ -477,10 +532,39 @@ hr {
   background-color: var(--Selection);
   padding: 5px 0px 5px 0px;
   color: var(--AnsiBrightWhite);
+  padding: 0px 0px 20px 0px;
 }
 
 .footer h3 {
   font-size: 25px;
+}
+
+.footer hr {
+  border-bottom: 0.5px solid var(--Background);
+} 
+
+.footer-info {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.up {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.up a {
+  text-decoration: none;
+}
+
+.up i {
+  
+  font-size: 40px;
+  float: right;
 }
 
 .form-control {

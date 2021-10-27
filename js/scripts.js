@@ -14,3 +14,12 @@ function scrollTop(event) {
         behavior: "smooth", 
     });
 }
+
+
+window.addEventListener('scroll', showButtonBack);
+
+function showButtonBack() {
+    const buttonBack = document.getElementById('scrollNav');
+    window.scrollY > 100 ? buttonBack.classList.add('show') : buttonBack.classList.remove('show');
+}
+

@@ -72,6 +72,13 @@ textarea::placeholder, input::placeholder, select::placeholder {
   text-decoration: none;
 }
 
+@media (max-width: 990px) {
+  #scrollNav {
+    margin-bottom: 240px;
+  }
+}
+
+
 #scrollNav:hover {
   cursor: pointer;
   background-color: #333;
@@ -321,7 +328,7 @@ hr {
 .users-chat ul li {
   list-style: none;
   display: inline-block;
-  margin-bottom: 5px;
+  margin: 0px 5px 5px 5px;
 }
 
 .users-chat li {
@@ -485,7 +492,14 @@ hr {
 }
 
 .interactions-options {
+  display: flex;
   justify-content: space-around;
+}
+
+@media (max-width: 360px) {
+  .interactions-options {
+    flex-direction: column;
+  }
 }
 
 .interactions-options a {
@@ -495,6 +509,14 @@ hr {
   width: 33.33%;
   margin: 0px 5px;
   text-align: center;
+}
+
+@media (max-width: 360px) {
+  .interactions-options a {
+    text-align: start;
+    padding: 5px 0px 5px 15px;
+    width: auto;
+  }
 }
 
 .interactions-options a:hover {
@@ -548,6 +570,27 @@ hr {
   justify-content: end;
   align-items: center;
 }
+
+.footer-content {
+  display: flex;
+}
+
+@media (max-width: 990px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-info {
+    justify-content: start;
+  }
+
+  .footer-info p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+
 
 .up {
   width: 100%;

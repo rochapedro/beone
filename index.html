@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="imagex/svg" href="./icons/beone.svg">
     <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="./fonts/fontawesome/css/all.min.css">
     <title>BeOne</title>
 </head>
 <body>
@@ -31,22 +32,222 @@
         
         <section class="content">
             <div class="user">
-                Usuario
+                <div class="container-fluid d-flex">
+                    <img class="user-image" src="./images/users/user1.jpeg" alt="Foto do usuário">
+                    <div class="user-information">
+                        <h3>Pedro Correa</h3>
+                        <svg width="96" height="20"><style>a:hover #llink{fill:url(#b);stroke:#ccc}a:hover #rlink{fill:#4183c4}</style><linearGradient id="a" x2="0" y2="100%"><stop offset="0" stop-color="#fcfcfc" stop-opacity="0"/><stop offset="1" stop-opacity=".1"/></linearGradient><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#ccc" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><g stroke="#d5d5d5"><rect stroke="none" fill="#fcfcfc" x="0.5" y="0.5" width="62" height="19" rx="2"/><rect x="68.5" y="0.5" width="27" height="19" rx="2" fill="#fafafa"/><rect x="68" y="7.5" width="0.5" height="5" stroke="#fafafa"/><path d="M68.5 6.5 l-3 3v1 l3 3" stroke="d5d5d5" fill="#fafafa"/></g><image x="5" y="3" width="14" height="14" xlink:href="./icons/beone.svg"/><g aria-hidden="false" fill="#333" text-anchor="middle" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" text-rendering="geometricPrecision" font-weight="700" font-size="110px" line-height="14px"><a target="_blank"><text aria-hidden="true" x="395" y="150" fill="#fff" transform="scale(.1)" textLength="350">Follow</text><text x="395" y="140" transform="scale(.1)" textLength="350">Follow</text><rect id="llink" stroke="#d5d5d5" fill="url(#a)" x=".5" y=".5" width="62" height="19" rx="2"/></a><a target="_blank"><rect width="28" x="68" height="20" fill="rgba(0,0,0,0)"/><text aria-hidden="true" x="815" y="150" fill="#fff" transform="scale(.1)" textLength="190">948</text><text id="rlink" x="815" y="140" transform="scale(.1)" textLength="190">948</text></a></g></svg>
+                    </div>    
+                </div>
             </div>
             <div class="new-pub">
-                Novas Publicacoes
+                <div class="container-fluid d-flex">
+                    <div class="user-new-pub">
+                        <div class="d-flex">
+                            <img src="./images/users/user1.jpeg" alt="Foto do usuário" class="user-image-pub">
+                            <input type="text" class="form-control" placeholder="No que está pensando?">
+                        </div>
+                        <div class="d-flex j-end">
+                            <ul class="tools">
+                                <li><a href="#"><i class="far fa-edit"></i></a></li>
+                                <li><a href="#"><i class="far fa-images"></i></a></li>
+                                <li><a href="#"><i class="fas fa-video"></i></a></li>
+                                <li><a href="#"><i class="fas fa-map-marked"></i></a></li>
+                            </ul>
+                            <button class="btn btn-primary">Publicar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <aside class="news">
-                Noticias
+            <aside class="follow-user" id="flow">
+                <div class="container-fluid">
+                    <h1>Quem seguir</h1>
+                    <div class="d-flex follow">
+                        <img src="./images/users/user1.jpeg" alt="Foto do usuário" class="user-image-follow">
+                        <div>
+                            <h4>Novo Usuário</h4>
+                            <a href="#">Adicionar aos amigos</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex follow">
+                        <img src="./images/users/user1.jpeg" alt="Foto do usuário" class="user-image-follow">
+                        <div>
+                            <h4>Novo Usuário</h4>
+                            <a href="#">Adicionar aos amigos</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex follow">
+                        <img src="./images/users/user1.jpeg" alt="Foto do usuário" class="user-image-follow">
+                        <div>
+                            <h4>Novo Usuário</h4>
+                            <a href="#">Adicionar aos amigos</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex follow">
+                        <img src="./images/users/user1.jpeg" alt="Foto do usuário" class="user-image-follow">
+                        <div>
+                            <h4>Novo Usuário</h4>
+                            <a href="#">Adicionar aos amigos</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex follow">
+                        <img src="./images/users/user1.jpeg" alt="Foto do usuário" class="user-image-follow">
+                        <div>
+                            <h4>Novo Usuário</h4>
+                            <a href="#">Adicionar aos amigos</a>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
             </aside>
+            <script>
+
+                
+
+                window.onload = function coordenadas(){
+                    let el = document.getElementById('flow');
+                    let elCo = el.getBoundingClientRect()
+
+                    console.log('top: ', elCo.top, elCo.right );
+                }
+            </script>
             <div class="information">
-                Informacoes
+                <div class="container-fluid">
+                    <div class="d-flex">
+                        <i class="far fa-file-alt feed"></i>
+                        <h3>Meu Feed</h3>
+                    </div>
+                    <hr>
+                    <div class="d-flex">
+                        <i class="fas fa-users friends"></i>
+                        <h3>Meus Amigos</h3>
+                    </div>
+                    <hr>
+                    <div class="d-flex">
+                        <i class="fas fa-user-circle profile"></i>
+                        <h3>Meu Perfil</h3>
+                    </div>
+                    <hr>
+                    <div class="d-flex">
+                        <i class="fas fa-envelope-open-text messages"></i>
+                        <h3>Mensagens</h3>
+                    </div>
+                    <hr>
+                    <div class="d-flex">
+                        <i class="far fa-images images"></i>
+                        <h3>Imagens</h3>
+                    </div>
+                    <hr>
+                    <div class="d-flex">
+                        <i class="fas fa-photo-video videos"></i>
+                        <h3>Vídeos</h3>
+                    </div>
+                    <hr>
+                </div>
             </div>
             <article class="post">
-                Posts
+                
+                <div class="card">
+                    <img src="https://themified.com/friend-finder/images/post-images/11.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>John Doe</b></h4> 
+                        <p>Architect & Engineer</p> 
+                    </div>
+                    <div class="comentarios">
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://themified.com/friend-finder/images/post-images/11.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>John Doe</b></h4> 
+                        <p>Architect & Engineer</p> 
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://themified.com/friend-finder/images/post-images/11.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>John Doe</b></h4> 
+                        <p>Architect & Engineer</p> 
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://themified.com/friend-finder/images/post-images/11.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>John Doe</b></h4> 
+                        <p>Architect & Engineer</p> 
+                    </div>
+                </div>
+               
             </article>
             <div class="chat">
-                chat
+                <div class="container-fluid">
+                    <div class="button-chat">
+                        <button class="btn btn-success">Chat Online</button>
+                    </div>
+                    <div class="users-chat">
+                       <ul>
+                           <li>
+                                <a href="#" title="">
+                                    <img src="./images/users/user1.jpeg" alt="Fotos dos usuários online" class="user-image-chat">
+                                    <span class="status-chat"></span>
+                                </a>  
+                           </li>
+                           <li>
+                                <a href="#" title="">
+                                    <img src="./images/users/user1.jpeg" alt="Fotos dos usuários online" class="user-image-chat">
+                                    <span class="status-chat"></span>
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="#" title="">
+                                    <img src="./images/users/user1.jpeg" alt="Fotos dos usuários online" class="user-image-chat">
+                                    <span class="status-chat"></span>
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="#" title="">
+                                    <img src="./images/users/user1.jpeg" alt="Fotos dos usuários online" class="user-image-chat">
+                                    <span class="status-chat"></span>
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="#" title="">
+                                    <img src="./images/users/user1.jpeg" alt="Fotos dos usuários online" class="user-image-chat">
+                                    <span class="status-chat"></span>
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="#" title="">
+                                    <img src="./images/users/user1.jpeg" alt="Fotos dos usuários online" class="user-image-chat">
+                                    <span class="status-chat"></span>
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="#" title="">
+                                    <img src="./images/users/user1.jpeg" alt="Fotos dos usuários online" class="user-image-chat">
+                                    <span class="status-chat"></span>
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="#" title="">
+                                    <img src="./images/users/user1.jpeg" alt="Fotos dos usuários online" class="user-image-chat">
+                                    <span class="status-chat"></span>
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="#" title="">
+                                    <img src="./images/users/user1.jpeg" alt="Fotos dos usuários online" class="user-image-chat">
+                                    <span class="status-chat"></span>
+                                </a>  
+                            </li>
+                       </ul>
+                    </div>
+                </div>
             </div>
             <footer class="footer">
                 footer 

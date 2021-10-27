@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Zen+Maru+Gothic:wght@300&display=swap');
 
 :root {
     --Background: #282A36;
@@ -42,9 +43,54 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--Background);
+  margin: 0;
+  padding: 0;
+  background-color: var(--Background);
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-primary {
+  background: #27aae1;
+  padding: 7px 25px;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  font-weight: 600;
+  outline: none;
+  border-radius: 30px;
+}
+
+.btn-success {
+  background: #8dc63f;
+  padding: 7px 25px;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  font-weight: 600;
+  outline: none;
+  border-radius: 30px;
+}
+
+.button-chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .card {
@@ -53,6 +99,7 @@ body {
   width: 100%;
   border-radius: 5px;
   background-color: var(--Foreground);
+  margin-bottom: 20px;
 }
 
 .card img {
@@ -68,6 +115,11 @@ body {
 .card .container {
   flex-wrap: wrap;
   box-sizing: border-box;
+}
+
+.comentarios {
+  background-color: var(--Selection);
+  height: 30px;
 }
 
 .container {
@@ -106,12 +158,13 @@ body {
   display: grid;
   grid-gap: 1rem;
   grid-template-areas: 
-    "user new-pub news"
-    "information post news"
-    "chat post news"
+    "user new-pub follow-user"
+    "information post follow-user"
+    "chat post follow-user"
+    "... post ..."
     "footer footer footer";
-  grid-template-columns: 27,5% 45% 27,5%;
-  grid-template-rows: 10vh 40vh 30vh auto;
+  grid-template-columns: 27.5% 45% 27.5%;
+  grid-template-rows: auto auto auto auto auto;
 }
 
 @media (max-width: 1125px) {
@@ -119,10 +172,10 @@ body {
     grid-template-areas: 
       "user new-pub"
       "information post"
-      "chat news"
+      "chat follow-user"
       "footer footer";
     grid-template-columns: calc(30% - 1rem) 70%;
-    grid-template-rows: 10vh 40vh 30vh auto;
+    grid-template-rows: auto 40vh 30vh auto;
   }
 }
 
@@ -132,48 +185,219 @@ body {
       "user"
       "information"
       "new-pub"
-      "news"
+      "follow-user"
       "post"
       "chat"
       "footer";
     grid-template-columns: 100%;
-    grid-template-rows: 10vh 40vh 30vh auto auto auto auto;
+    grid-template-rows: auto 40vh 30vh auto auto auto auto;
   }
+}
+
+.follow {
+  margin: 10px 0px 10px 0px;
+}
+
+.follow a {
+  text-decoration: none;
+  color: #8dc63f;
+}
+
+.follow h4 {
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+
+hr {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 0.5px solid var(--Selection);
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
 }
 
 .user {
   grid-area: user;
-  background-color: #6272A4;
+  padding: 5px 0px 5px 0px;
+  background: linear-gradient(to bottom, rgba(39,170,225,.8), rgba(28,117,188,.8));
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 7px;
+}
+
+.user h3 {
+  color: var(--AnsiBrightWhite);
+}
+
+.users-chat {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.users-chat ul {
+  padding: 0px 20px 0px 20px;
+
+}
+
+.users-chat ul li {
+  list-style: none;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.users-chat li {
+  position: relative;
+}
+
+.user:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.user-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 10px solid var(--Background);
+  margin-top: -50px;
+}
+
+.user-image-pub {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-image-follow {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 13px;
+}
+
+.user-image-chat {
+  width: 70px;
+  height: 65px;
+  border-radius: 50%;
+  margin-right: 13px;
+  margin: 5px;
 }
 
 .new-pub {
   grid-area: new-pub;
-  background-color: #69FF94;
+  padding: 5px 0px 5px 0px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: var(--Selection);
+  border-radius: 7px;
 }
 
-.news {
-  grid-area: news;
-  background-color: #A4FFFF;
+.new-pub i {
+  color: var(--AnsiBrightWhite);
+}
+
+.follow-user {
+  grid-area: follow-user;
+  padding: 5px 0px 5px 0px;
+  display: block;
+  justify-content: end;
+  color: var(--AnsiBrightWhite);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.follow-user h1 {
+  font-size: 27px;
+  margin-top: 0px;
+}
+
+.follow-user hr {
+  margin-left: 80px;
 }
 
 .information {
   grid-area: information;
-  background-color: #F1FA8C;
+  padding: 5px 0px 5px 0px;
+}
+
+.information .feed {
+  color: #8dc63f;
+}
+
+.information .friends {
+  color: #662d91;
+}
+
+.information .profile {
+  color: #ee2a7b;
+}
+
+.information .messages {
+  color: #f7941e;
+}
+
+.information .videos {
+  color: #1c75bc;
+}
+
+.information .images {
+  color: #9e1f63;
+}
+
+.information h3 {
+  margin-left: 15px;
+  color: var(--AnsiBrightWhite);
+  font-size: 16px;
+}
+
+.information hr {
+  margin-left: 30px;
+}
+
+.information i, .information h3 {
+  cursor: pointer;
 }
 
 .post {
   grid-area: post;
-  background-color: #FF6E6E;
+  padding: 0px 0px 5px 0px;
 }
 
 .chat {
   grid-area: chat;
-  background-color: aqua;
+  padding: 5px 0px 5px 0px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
 
 .footer {
   grid-area: footer;
   background-color: brown;
+  padding: 5px 0px 5px 0px;
+}
+
+.form-control {
+  display: block;
+  height: auto;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  color: #939598;
+  width: 100% !important;
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
 .icon {
@@ -202,7 +426,7 @@ body {
   background-color: var(--Selection);
   height: 70px;
   width: 100%;
-
+  color: var(--AnsiBrightWhite);
 }
 
 .nav-menu {
@@ -225,4 +449,54 @@ body {
 .navbar .container h3 {
     margin-left: 5px;
     font-size: 35px;
+}
+
+.status-chat {
+  background: linear-gradient(to bottom, rgba(141,198,63, 1), rgba(0,148,68, 1));
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2px;
+  border: 2px solid #fff;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.tools {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+
+.tools a {
+  color: inherit;
+}
+
+.tools li {
+  padding: 4px;
+}
+
+.user-information {
+  margin: 5px 0px 5px 20px;
+}
+
+.user-information h3 {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.user-new-pub {
+  margin: 5px 0px 5px 0px;
+  width: 100%;
+}
+
+.user-new-pub input{
+  border-radius: 20px;
+}
+
+.j-end {
+  justify-content: end;
 }

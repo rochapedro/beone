@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="Nav">
             <div class="container">
                 <img class="icon" src="./icons/beone.svg" alt="Ícone BeOne">
                 <h3>beOne</h3>
@@ -141,35 +141,39 @@
             <article class="post">
                 
                 <div class="card">
-                    <img src="https://themified.com/friend-finder/images/post-images/11.jpg" alt="Avatar" style="width:100%">
-                    <div class="container">
-                        <h4><b>John Doe</b></h4> 
+                    <div class="container-fluid">
+                        <div class="d-flex pub-header">
+                            <img src="./images/users/user1.jpeg" alt="Foto do usuário" class="user-image-post">
+                            <div>
+                                <h4 class="user-name-pub"><b>John Doe</b></h4> 
+                                <div class="d-flex info-pub">
+                                    <h5>2 h</h5>
+                                    <i class="fas fa-globe-americas"></i>
+                                </div>
+                            </div>
+                        </div>
                         <p>Architect & Engineer</p> 
                     </div>
-                    <div class="comentarios">
-                        
+                    <img src="https://themified.com/friend-finder/images/post-images/11.jpg" alt="Avatar" class="card-img">
+                    <div class="container-fluid">
+                        <div class="d-flex interactions">
+                            <i class="far fa-thumbs-up like"></i>
+                            <i class="fas fa-heart heart"></i>
+                            <p class="interactions-info">Pedro Correa e outras 5 mil pessoas</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex interactions-options">
+                            <a href="#"><i class="far fa-thumbs-up"></i><b>Curtir</b></a>
+                            <a href="#"><i class="far fa-comment-alt"></i><b>Comentar</b></a>
+                            <a href="#"><i class="fas fa-share"></i><b>Compartilhar</b></a>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                            <img src="./images/users/user1.jpeg" alt="Foto do usuário" class="user-image-pub">
+                            <input type="text" class="form-control" placeholder="Escreva um comentário...">
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="https://themified.com/friend-finder/images/post-images/11.jpg" alt="Avatar" style="width:100%">
-                    <div class="container">
-                        <h4><b>John Doe</b></h4> 
-                        <p>Architect & Engineer</p> 
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://themified.com/friend-finder/images/post-images/11.jpg" alt="Avatar" style="width:100%">
-                    <div class="container">
-                        <h4><b>John Doe</b></h4> 
-                        <p>Architect & Engineer</p> 
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://themified.com/friend-finder/images/post-images/11.jpg" alt="Avatar" style="width:100%">
-                    <div class="container">
-                        <h4><b>John Doe</b></h4> 
-                        <p>Architect & Engineer</p> 
-                    </div>
+                   
                 </div>
                
             </article>
@@ -238,11 +242,19 @@
                     </div>
                 </div>
             </div>
-            <footer class="footer">
-                footer 
-            </footer>
         </section>
     </div>
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <img class="icon" src="./icons/beone.svg" alt="Ícone BeOne">
+                <h3>beOne</h3>
+                <a href="#Nav" id="scrollNav">Voltar ao Topo</a>
+            </div>
+              
+        </div> 
+    </footer>
     </main>
+    <script src="./js/scroll.js"></script>
 </body>
 </html>

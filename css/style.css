@@ -475,6 +475,18 @@ hr {
   font-size: 14px;
 }
 
+.interactions {
+  display: flex;
+}
+
+@media (max-width: 390px) {
+  .interactions {
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 5px;
+  }
+}
+
 .interactions i {
   font-size: 18px;
 }
@@ -489,6 +501,12 @@ hr {
 
 .interactions-info {
   margin: 5px 5px 5px 10px;
+}
+
+@media (max-width: 390px) {
+  .interactions-info {
+    margin: 5px 5px 5px 0px;
+  }
 }
 
 .interactions-options {

@@ -100,19 +100,6 @@ textarea::placeholder, input::placeholder, select::placeholder {
   visibility: visible;
 }
 
-.aside-content-login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.aside-content-login h1 {
-  color: var(--AnsiBrightWhite);
-  font-size: 90px;
-  letter-spacing: 1rem;
-}
-
 .article {
   height: 70px;
   width: 70px;
@@ -238,7 +225,6 @@ textarea::placeholder, input::placeholder, select::placeholder {
     padding-bottom: 15px;
     margin-right: auto;
     margin-left: auto;
-    display: flex;
     height: 100%;
 }
 
@@ -312,9 +298,9 @@ textarea::placeholder, input::placeholder, select::placeholder {
   display: grid;
   grid-template-areas: 
     "login"
-    "aside"
+    "article-login"
     "footer";
-  grid-template-columns: 100%;
+  grid-template-columns: 100vw;
   grid-template-rows: 550px auto auto;
 }
 
@@ -618,10 +604,25 @@ hr {
   padding: 0px 0px 20px 0px;
 }
 
-.aside {
-  grid-area: aside;
+.article-login {
+  grid-area: article-login;
   display: flex;
   position: relative;
+}
+
+.article-login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.article-login-content h1 {
+  font-size: 95px;
+  color: var(--AnsiBrightWhite);
+  letter-spacing: 1rem;
+  margin: auto;
 }
 
 .login {

@@ -300,8 +300,8 @@ textarea::placeholder, input::placeholder, select::placeholder {
     "login"
     "article-login"
     "footer";
-  grid-template-columns: 100%;
-  grid-template-rows: 550px minmax(700px, auto) auto;
+  grid-template-columns: 100vw;
+  grid-template-rows: 550px auto auto;
 }
 
 .follow {
@@ -614,96 +614,15 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-
-.article-login-content .btn-primary {
-  box-shadow: 0 12px 12px 0 rgb(0 0 0 / 25%);
-  margin: -30px 10px 20px 10px;
+  box-sizing: border-box;
 }
 
 .article-login-content h1 {
-  font-size: 140px;
+  font-size: 90px;
   color: var(--AnsiBrightWhite);
-  margin-bottom: 0px;
-  position: relative;
-  overflow: hidden;
-  padding: 10px 25px 20px 20px;
-  border-radius: 15px;
-}
-
-.article-login-content h1 span:nth-child(1) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 7px;
-  background: linear-gradient(to right, var(--Selection), rgba(28,117,188,1));
-  animation: border-beone-top 2s linear infinite
-}
-
-@keyframes border-beone-top {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-.article-login-content h1 span:nth-child(2) {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 7px;
-  height: 100%;
-  background: linear-gradient(to bottom, var(--Selection), rgba(28,117,188,1));
-  animation: border-beone-right 2s linear infinite;
-  animation-delay: 1s;
-}
-
-@keyframes border-beone-right {
-  0% { transform: translatey(-100%); }
-  100% { transform: translatey(100%); }
-}
-
-.article-login-content h1 span:nth-child(3) {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 7px;
-  background: linear-gradient(to left, var(--Selection), rgba(28,117,188,.9));
-  animation: border-beone-left 2s linear infinite;
-}
-
-@keyframes border-beone-left {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-.article-login-content h1 span:nth-child(4) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 7px;
-  height: 100%;
-  background: linear-gradient(to top, var(--Selection), rgba(28,117,188,.9));
-  animation: border-beone-bottom 2s linear infinite;
-  animation-delay: 1s;
-}
-
-@keyframes border-beone-bottom {
-  0% { transform: translatey(100%); }
-  100% { transform: translatey(-100%); }
-}
-
-@media (max-width: 425px) {
-  .article-login-content h1 {
-    font-size: 80px;
-  }
-}
-
-@media (max-width: 375px) {
-  .article-login-content h1 {
-    font-size: 70px;
-  }
+  letter-spacing: 1rem;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 .login {
@@ -989,93 +908,4 @@ hr {
 }
 
 
-.list-content-apresentation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  text-align: center;
-  flex-wrap: wrap;
-  margin: -60px auto auto auto;
-  padding: 0px;
-  position: absolute;
-  top: 340px;
-}
-
-.list-content-apresentation div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 5px 30px 5px 30px;
-  text-align: center;
-  position: relative;
-  top: 100px;
-}
-
-.list-content-apresentation h3 {
-  color: var(--AnsiBrightWhite);
-  margin: auto;
-}
-
-.list-content-apresentation div i {
-  background: linear-gradient(to bottom, rgba(39,170,225,.9), rgba(28,117,188,.9));
-  background-size: cover;
-  background-position: center;
-  width: 110px;
-  height: 110px;
-  border-radius: 55px;
-  margin: auto;
-  box-shadow: 0 12px 12px 0 rgb(0 0 0 / 25%);
-  cursor: pointer;
-  font-size: 35px;
-  color: var(--AnsiBrightWhite);
-  line-height: 100px;
-}
-
-@keyframes card-circle{
-	0%   {top: 100px;}
-  50%  {top: 30px;}
-  100% {top: 100px;}
-}
-.floating-efect1 { 
-  animation: card-circle 4s 0s ease-in-out infinite;
-}
-
-.floating-efect2 {
-  animation: card-circle 4s 0.5s ease-in-out infinite;
-}
-
-.floating-efect3 {  
-  animation: card-circle 4s 1s ease-in-out infinite;
-}
-
-.floating-efect4 {
-  animation: card-circle 4s 1.5s ease-in-out infinite;
-}
-
-@keyframes title-card-circle{
-	0%   {padding-top: 0px;}
-  50%  {padding-top: 10px;}
-  100% {padding-top: 0px;}
-}
-.floating-title1 { 
-  animation: title-card-circle 4s 0s ease-in-out infinite;
-}
-
-.floating-title2 {
-  animation: title-card-circle 4s 0.5s ease-in-out infinite;
-}
-
-.floating-title3 {  
-  animation: title-card-circle 4s 1s ease-in-out infinite;
-}
-
-.floating-title4 {
-  animation: title-card-circle 4s 1.5s ease-in-out infinite;
-}
-
-.map {
-  margin-top: 270px;
-}
 

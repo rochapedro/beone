@@ -301,7 +301,7 @@ textarea::placeholder, input::placeholder, select::placeholder {
     "article-login"
     "footer";
   grid-template-columns: 100%;
-  grid-template-rows: 550px minmax(700px, auto) auto;
+  grid-template-rows: 550px auto auto;
 }
 
 .follow {
@@ -617,12 +617,7 @@ hr {
   position: relative;
 }
 
-.article-login-content .btn-primary {
-  box-shadow: 0 12px 12px 0 rgb(0 0 0 / 25%);
-  margin: -30px 10px 20px 10px;
-}
-
-.article-login-content h1 {
+.article-login-content .beone, .article-login-content .download {
   font-size: 140px;
   color: var(--AnsiBrightWhite);
   margin-bottom: 0px;
@@ -632,7 +627,13 @@ hr {
   border-radius: 15px;
 }
 
-.article-login-content h1 span:nth-child(1) {
+@media (max-width: 780px) {
+  .article-login-content .beone, .article-login-content .download {
+    font-size: 100px;
+  }
+}
+
+.article-login-content .beone span:nth-child(1) {
   position: absolute;
   top: 0;
   left: 0;
@@ -647,7 +648,7 @@ hr {
   100% { transform: translateX(100%); }
 }
 
-.article-login-content h1 span:nth-child(2) {
+.article-login-content .beone span:nth-child(2) {
   position: absolute;
   top: 0;
   right: 0;
@@ -663,7 +664,7 @@ hr {
   100% { transform: translatey(100%); }
 }
 
-.article-login-content h1 span:nth-child(3) {
+.article-login-content .beone span:nth-child(3) {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -678,7 +679,7 @@ hr {
   100% { transform: translateX(-100%); }
 }
 
-.article-login-content h1 span:nth-child(4) {
+.article-login-content .beone span:nth-child(4) {
   position: absolute;
   top: 0;
   left: 0;
@@ -694,15 +695,27 @@ hr {
   100% { transform: translatey(-100%); }
 }
 
-@media (max-width: 425px) {
-  .article-login-content h1 {
-    font-size: 80px;
+@media (max-width: 375px) {
+  .article-login-content .beone {
+    font-size: 70px;
+    margin-top: 100px;
+  }
+
+  .article-login-content .download {
+    font-size: 50px;
+    margin-top: 190px;
   }
 }
 
-@media (max-width: 375px) {
-  .article-login-content h1 {
-    font-size: 70px;
+@media (max-width: 425px) {
+  .article-login-content .beone {
+    font-size: 80px;
+    margin-top: 100px;
+  }
+
+  .article-login-content .download {
+    font-size: 55px;
+    margin-top: 190px;
   }
 }
 
@@ -1002,6 +1015,13 @@ hr {
   top: 340px;
 }
 
+@media (max-width: 425px) {
+  .list-content-apresentation {
+    margin: -30px auto;
+    position: static;
+  }
+}
+
 .list-content-apresentation div {
   display: flex;
   flex-direction: column;
@@ -1011,6 +1031,12 @@ hr {
   text-align: center;
   position: relative;
   top: 100px;
+}
+
+@media (max-width: 720px) {
+  .list-content-apresentation div {
+    margin: 20px 30px 20px 30px;
+  }
 }
 
 .list-content-apresentation h3 {
@@ -1075,7 +1101,36 @@ hr {
   animation: title-card-circle 4s 1.5s ease-in-out infinite;
 }
 
+@media (max-width: 720px) {
+  .floating-efect1, .floating-efect2, .floating-efect3, .floating-efect4,
+  .floating-title1, .floating-title2, .floating-title3, .floating-title4 {
+    animation: none;
+  }
+}
+
 .map {
   margin-top: 270px;
 }
 
+@media (max-width: 890px) {
+  .map {
+    display: none;
+  }
+
+  .download {
+    margin-top: 300px;
+  }
+}
+
+.buttons-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.buttons-download button {
+  box-shadow: 0 12px 12px 0 rgb(0 0 0 / 25%);
+  margin: 10px;
+}

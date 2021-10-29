@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Zen+Maru+Gothic:wght@300&display=swap');
+
+/*---------------------------------------------------
+|- Devenvolvido por: Pedro Correa                   |
+|- E-mail: pedro.nec@hotmail.com                    |
+|- Github: https://github.com/rochapedro            |
+|- Linkedin: www.linkedin.com/in/pedrorocha-dev     |
+|- 28/10/2021                                       |
+---------------------------------------------------*/
+
+:root {
+    --Background: #282A36;
+    --Foreground: #F8F8F2;
+    --Selection: #44475A;
+    --Comment: #6272A4;
+    --Red: #FF5555;
+    --Orange: #FFB86C;
+    --Yellow: #F1FA8C;
+    --Green: #50FA7B;
+    --Purple: #BD93F9;
+    --Cyan: #8BE9FD;
+    --Pink: #FF79C6;
+    --AnsiBlack: #21222C;
+    --AnsiRed: #FF5555;
+    --AnsiGreen: #50FA7B;
+    --AnsiYellow: #F1FA8C;
+    --AnsiBlue: #BD93F9;
+    --AnsiMagenta: #FF79C6;
+    --AnsiCyan: #8BE9FD;
+    --AnsiWhite: #F8F8F2;
+    --AnsiBrightBlack: #6272A4;
+    --AnsiBrightRed: #FF6E6E;
+    --AnsiBrightGreen: #69FF94;
+    --AnsiBrightYellow: #FFFFA5;
+    --AnsiBrightBlue: #D6ACFF;
+    --AnsiBrightMagenta: #FF92DF;
+    --AnsiBrightCyan: #A4FFFF;
+    --AnsiBrightWhite: #FFFFFF;
+}
+
+/*TAGS*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--Background);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+hr {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.5px solid var(--Selection);
+}
+  
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+  
+textarea::placeholder, input::placeholder, select::placeholder {
+    color: var(--AnsiBrightWhite);
+}
+
+/*ID`s*/
+#home-banner {
+    background: url(../images/banners/bg-1.jpg) fixed no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+  
+#scrollNav {
+    display: inline-block;
+    background-color: var(--Selection);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    margin-bottom: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: var(--AnsiBrightWhite);
+    text-decoration: none;
+}
+
+#scrollNav:active {
+    background-color: #555;
+}
+
+#scrollNav:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#scrollNav.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.article {
+    height: 70px;
+    width: 70px;
+    background-color: #6272A4;
+}
+  
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+}
+  
+.btn-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+  
+.btn-login a {
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: var(--AnsiBrightWhite);
+    margin: 5px 15px 15px 15px;
+}
+  
+.btn-primary {
+    background: linear-gradient(to bottom, rgba(39,170,225,.8), rgba(28,117,188,.8));
+    padding: 7px 25px;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+    font-weight: 600;
+    outline: none;
+    border-radius: 30px;
+}
+  
+.btn-primary-circle {
+    background: linear-gradient(to bottom, rgba(39,170,225,.8), rgba(28,117,188,.8));
+    padding: 7px 25px;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+    font-weight: 600;
+    outline: none;
+    display:block;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+  
+.btn-success {
+    background: #8dc63f;
+    padding: 7px 25px;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+    font-weight: 600;
+    outline: none;
+    border-radius: 30px;
+}
+  
+.button-chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
